@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>aula 11 </p>
+    <p>
+        De qual pais voce é? 
+    </p>
+        <input type="text" id="txt1">
+        <input type="submit" value="Enviar" onclick="valPais()">
+    
+    <p id="res"></p>
+    
+    <script>
+        function valPais(){
+            var txtpais = window.document.querySelector('input#txt1')
+            var pais = txtpais.value
+            var res = window.document.getElementById('res')
+            res.innerText = `Voce é do pais ${pais}`
+            if (pais == 'Brasil' || pais == 'brasil'){//condicao composta
+                res.innerHTML += `<p>Voce é Brasileiro!</p>`
+            }else{
+                res.innerHTML += `<p>Voce é Estrangeiro!</p>`
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

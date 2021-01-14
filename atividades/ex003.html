@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro JS</title>
+    <style>
+        body{
+            background-color: skyblue;
+            color: darkgreen;
+            font: normal 20px Arial;
+        }
+        p{ 
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+    <p>exercicio da aula 6</p>
+    <script>
+        var n1 = Number(window.prompt('digite um numero')) // Number- transforma ou para int ou float, dependendo do que foi digitado
+        var n2 = Number.parseInt(window.prompt('digite outro numero'))
+        s = n1 + n2
+        //window.alert('a soma dos valores é: ' + s)
+        window.alert(`A soma entre ${n1} e ${n2} é: ${s}`)
+    </script>
+</body>
+</html>

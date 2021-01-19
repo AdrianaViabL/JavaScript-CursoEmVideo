@@ -8,15 +8,23 @@ function contar(){
         res.innerHTML = `impossível contar!` 
     }else{
         vlpasso = Number(passo.value)
-        if (passo.value == '' || Number(passo.value) == 0){
+        if (passo.value == '' || Number(passo.value) <= 0){
             window.alert('Passo inválido! Considerando PASSO 1')
             vlpasso = 1
         }
         vlini = Number(ini.value)
         vlfim = Number(fim.value)
         res.innerHTML = `<p>contando:</p>`
-        for(vlini;vlini <= vlfim;vlini += vlpasso){
-            res.innerHTML += `${vlini} 👉`
+        //contagem crescente
+        if (vlini < vlfim){
+            for(vlini;vlini <= vlfim;vlini += vlpasso){
+                res.innerHTML += `${vlini} 👉`
+            }
+        }else{
+            //contagem regressiva
+            for(vlini;vlini >= vlfim;vlini -= vlpasso){
+                res.innerHTML += `${vlini} 👉`
+            }
         }
         res.innerHTML += `🏁`
     }

@@ -15,12 +15,16 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 3px 5px 10px black;
+    text-align: left;
 }
 
 div{
     padding: 10px 0px 10px 0px;
 }
 
+select{
+    min-width: 150px;
+}
 img{
     max-width: 200px;
     border-radius: 50%;
